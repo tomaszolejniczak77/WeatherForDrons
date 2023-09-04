@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Aplikacja webowa z pogodą pomocną przy lataniu dronem. Autor: Tomasz Olejniczak">
+    <title>Drony - pogoda na 48 godzin do latania dronem</title>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@4.3.0/dist/chart.umd.min.js"></script>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+     integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY="
+     crossorigin=""/>
+     <script
+      src="https://kit.fontawesome.com/58537081b9.js"
+      crossorigin="anonymous"
+    ></script>
+    <link rel="stylesheet" href="/src/css/style.css">
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+    integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo="
+    crossorigin=""></script>
+
+    <link rel="stylesheet" href="https://unpkg.com/leaflet-control-geocoder/dist/Control.Geocoder.css" />
+    <script src="https://unpkg.com/leaflet-control-geocoder/dist/Control.Geocoder.js"></script>  
+</head>
+
+<body>
+
+    <div id="map"></div> 
+
+    <header>
+        <h1>Pogoda dla dronów</h1>
+    </header>
+    
+        <!-- <div class="settingIcon"><i class="fa-solid fa-gear fa-xl"></i></div> -->
+
+
+    <section id="tiles" class="section1">
+    
+        <div class="tilesLine1">
+
+            <div id="temp" class="tiles"></div>
+            <div id="icon" class="tiles"></div>
+            <div id="gusts" class="tiles"></div>
+            
+        </div>
+        
+        <div class="tilesLine2">
+ 
+            <div id="precipitation" class="tiles"></div>
+            <div id="clouds" class="tiles"></div>
+            <div id="wind" class="tiles"></div>
+
+        </div>
+
+        <div class="tilesLine3">
+
+            <div id="kpIndex" class="tiles"></div>
+            <div id="settings" class="tiles"></div>
+            <div id="windDirection" class="tiles"></div>
+            
+        </div>
+
+        <div class="tilesLine4">
+
+            <div id="sunRiseTime" class="tiles"></div>
+            <div id="legend" class="tiles"></div>  
+            <div id="sunSetTime" class="tiles"></div>
+            
+        </div>
+
+    </section>
+
+    <section class="canvas">
+
+        <div class="canvasTod">
+        <canvas class="chartTod" id="chartTod"></canvas>
+        </div>
+
+        <div class="canvasTom">
+        <canvas class="chartTom" id="chartTom"></canvas>
+        </div> 
+
+    </section>
+
+
+    <footer id="footer">
+        <a href="https://open-meteo.com/">Weather data from Open Meteo / Dane o pogodzie pochodzą z Open Meteo</a>
+        <h6>&#169 Tomasz Olejniczak / ver.2.00 / 2023</h6>
+    </footer>
+
+    <script src="/src/js/home.js"></script>
+    
+    
+
+</body>
+    
+</html>

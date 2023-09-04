@@ -1,0 +1,287 @@
+body{
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    color: #00da8b;
+    background: black;
+}
+
+h6 {
+  margin: 5px 15px ;
+  color: goldenrod;
+  text-align: right;
+}
+
+h1 {
+  color: goldenrod;
+  text-align: center;
+}
+
+#map{
+    height: 140px;
+    
+}
+
+.section1 {
+  background: black;
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.tilesLine1,
+.tilesLine2,
+.tilesLine3,
+.tilesLine4 {
+width: 500px;
+height: 180px;
+display: flex;
+justify-content: space-around;
+align-items: center;
+text-align: center;
+}
+
+.tiles {
+    background: #004425;
+    width: 120px;
+    height: 120px;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items:center;
+    scale: 100%;
+    transition: all 500ms;
+}
+
+.tiles.active {
+  display: flex;
+  scale: 200%;
+  z-index: 1;
+}
+
+#settings,
+#gusts,
+#temp,
+#clouds,
+#wind,
+#precipitation{
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+#kpIndex,
+#sunRiseTime,
+#sunSetTime,
+#windDirection {
+  flex-direction: column;
+}
+
+
+#settings button {
+  background: goldenrod;
+  border: 0;
+  border-radius: 3px;
+  width: 50px;
+  cursor: pointer;
+  /* scale: 100%; */
+  opacity: 0.5;
+}
+
+#settings button.clicked {
+  background-color: rgb(186, 93, 12);
+  /* scale: 110%; */
+  opacity: 1;
+}
+
+#legend {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+#legend.active {
+  justify-content: center;
+  position: relative;
+}
+
+#iconMark {
+  position: absolute;
+  top: -15px;
+  color: goldenrod;
+  width: 100%;
+  display: flex;
+  justify-content: right;
+  cursor: pointer;
+}
+
+#legend ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+#legend ul li {
+  font-size: 8px;
+  color: goldenrod;
+  margin: 5px;
+}
+
+.chartBtn {
+  background: goldenrod;
+  width: 100px;
+  height: 20px;
+  cursor: pointer;
+  border: 0;
+  border-radius: 3px;
+  /* scale: 100%; */
+  opacity: 0.5;
+}
+
+.chartBtn.clicked {
+  background-color: rgb(186, 93, 12);
+  /* scale: 110%; */
+  opacity: 1;
+}
+
+.canvas {
+  display: flex;
+  width: 100%;
+  justify-content: space-around;
+}
+
+.canvasTod {
+  position: relative;
+  height: 300px;
+  width: 48vw;
+  background: wheat;
+  display: flex;
+  justify-content: center;
+}
+
+.canvasTom {
+  position: relative;
+  background-color: wheat;
+  height: 300px;
+  width: 48vw;
+  display: flex;
+  justify-content: center;
+}
+
+footer{
+  width: 100%;
+  text-align: center;
+}
+
+footer a {
+  color: goldenrod;
+  font-size: 10px;
+  
+}
+
+.tiles.badConditions {
+    background: rgb(141, 6, 6);
+} 
+
+.fa-cloud-rain,
+.fa-cloud-showers-heavy,
+.fa-umbrella,
+.fa-cloud-bolt
+ {
+  color: lightblue;
+}
+
+.fa-cloud,
+.fa-smog {
+  color: lightslategray;
+}
+
+.fa-snowflake,
+.fa-icicles {
+  color: snow;
+}
+
+.fa-cloud-sun {
+  color: rgb(18, 221, 204);
+}
+
+.fa-sun {
+  color: yellow;
+}
+
+/* .fa-xmark {
+  margin: 20px;
+} */
+
+@media (max-width: 1280px) {
+
+  .tiles {
+    width: 140px;
+    height: 140px;
+  }
+
+}
+
+
+@media (max-width: 800px) {
+
+  .section1 {
+    background: black;
+    width: 100%;
+    height: 500px;
+    flex-wrap: wrap;
+  }
+
+  .tilesLine1,
+  .tilesLine2,
+  .tilesLine3,
+  .tilesLine4 {
+  display: flex;
+  justify-content: space-around;
+  height: 120px;
+  }
+  
+  .tiles {
+    width: 115px;
+    height: 115px;
+  }
+
+  .canvas {
+    height: 450px;
+    flex-direction: column;
+  }
+
+  .canvasTod {
+    height: 220px;
+    width: 100vw;
+  }
+
+  .canvasTom {
+    height: 220px;
+    width: 100vw;
+  }
+
+  h6{
+    text-align: center;
+  }
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
